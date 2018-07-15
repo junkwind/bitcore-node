@@ -94,7 +94,7 @@ describe('#add', function() {
       var callCount = 0;
       var oldPackage = {
         dependencies: {
-          '@monaco-ex/bitcore-lib': '^v0.14.0',
+          'bitcore-lib': '^v0.14.0',
           'bitcore-node': '^v0.2.0'
         }
       };

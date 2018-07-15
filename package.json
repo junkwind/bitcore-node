@@ -1,13 +1,13 @@
 {
-  "name": "monacore-node",
+  "name": "dongricore-node",
   "description": "Full node with extended capabilities using Bitcore and Bitcoin Core",
   "author": "BitPay <dev@bitpay.com>",
   "version": "3.1.3-pre-7",
   "main": "./index.js",
-  "repository": "git://github.com/monaco-ex/bitcore-node.git",
+  "repository": "git://github.com/junkwind/bitcore-node.git",
   "homepage": "https://github.com/bitpay/bitcore-node",
   "bugs": {
-    "url": "https://github.com/monaco-ex/bitcore-node/issues"
+    "url": "https://github.com/junkwind/bitcore-node/issues"
   },
   "contributors": [
     {
@@ -31,12 +31,12 @@
     }
   ],
   "bin": {
-    "monacore-node": "./bin/monacore-node",
-    "monacoind": "./bin/monacoind"
+    "dongricore-node": "./bin/dongricore-node",
+    "dongrid": "./bin/dongrid"
   },
   "scripts": {
     "preinstall": "./scripts/download",
-    "verify": "./scripts/download --skip-monacoin-download --verify-monacoin-download",
+    "verify": "./scripts/download --skip-dongri-download --verify-dongri-download",
     "test": "mocha -R spec --recursive",
     "regtest": "./scripts/regtest",
     "jshint": "jshint --reporter=node_modules/jshint-stylish ./lib",
@@ -44,12 +44,12 @@
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "tags": [
-    "monacoin",
-    "monacoind"
+    "dongri",
+    "dongrid"
   ],
   "dependencies": {
-    "coininfo": "^2.0.0",
-    "@monaco-ex/bitcore-lib": "^0.14.0-segwit-1",
+    "coininfo": "git+https://github.com/junkwind/coininfo#master-dongri",
+    "bitcore-lib": "git+https://github.com/junkwind/bitcore-lib#master-dongri",
     "async": "^1.3.0",
     "bitcoind-rpc": "^0.6.0",
     "body-parser": "^1.13.3",

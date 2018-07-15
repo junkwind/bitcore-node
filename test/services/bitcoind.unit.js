@@ -6,7 +6,7 @@ var path = require('path');
 var EventEmitter = require('events').EventEmitter;
 var should = require('chai').should();
 var crypto = require('crypto');
-var bitcore = require('@monaco-ex/bitcore-lib');
+var bitcore = require('bitcore-lib');
 var _ = bitcore.deps._;
 var sinon = require('sinon');
 var proxyquire = require('proxyquire');
@@ -769,7 +769,7 @@ describe('Bitcoin Service', function() {
         }
       };
       var bitcoind = new BitcoinService(config);
-      bitcoind._getDefaultConf().rpcport.should.equal(9402);
+      bitcoind._getDefaultConf().rpcport.should.equal(8332);
     });
     it('will get default rpc port for testnet', function() {
       var config = {
@@ -782,7 +782,7 @@ describe('Bitcoin Service', function() {
         }
       };
       var bitcoind = new BitcoinService(config);
-      bitcoind._getDefaultConf().rpcport.should.equal(19402);
+      bitcoind._getDefaultConf().rpcport.should.equal(18332);
     });
     it('will get default rpc port for regtest', function() {
       bitcore.Networks.enableRegtest();
@@ -796,7 +796,7 @@ describe('Bitcoin Service', function() {
         }
       };
       var bitcoind = new BitcoinService(config);
-      bitcoind._getDefaultConf().rpcport.should.equal(19402);
+      bitcoind._getDefaultConf().rpcport.should.equal(18332);
     });
   });
 
